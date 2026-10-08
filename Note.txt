@@ -1,0 +1,8 @@
+D-Plan
+
+Level design (ProBuilder)
+	มี 2 levels ตาม gameplay stage
+
+Gameplay 2 stage
+	1: Capsule player
+	2: Humanoid player
