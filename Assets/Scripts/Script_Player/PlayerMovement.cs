@@ -31,6 +31,16 @@ namespace Theerapat_Boongrom.Code672110100
         {
             Vector2 move = moveAction.ReadValue<Vector2>();
             transform.Translate(new Vector3(move.x, 0f, move.y) * Time.deltaTime * 5f);
+
+            if (jumpAction.WasPressedThisFrame())
+            {
+                Jump();
+            }
+        }
+
+        void Jump()
+        {
+            transform.Translate(Vector3.up * 0.5f, Space.World);
         }
     }
     
