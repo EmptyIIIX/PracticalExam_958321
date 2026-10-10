@@ -7,6 +7,7 @@ namespace Theerapat_Boongrom.Code672110100
     public class GameAppFlowManager : Singleton<GameAppFlowManager>
     {
         protected static bool IsSceneOptionsLoaded;
+        protected static bool IsSceneStageSelectionLoaded;
 
         public void LoadScene(string sceneName)
         {
@@ -38,6 +39,24 @@ namespace Theerapat_Boongrom.Code672110100
             {
                 SceneManager.UnloadSceneAsync(optionSceneName);
                 IsSceneOptionsLoaded = false;
+            }
+        }
+
+        public void LoadStageSelectionScene(string stageSelectionSceneName)
+        {
+            if (!IsSceneStageSelectionLoaded)
+            {
+                SceneManager.LoadScene(stageSelectionSceneName, LoadSceneMode.Additive);
+                IsSceneStageSelectionLoaded = true;
+            }
+        }
+
+        public void UnloadStageSelectionScene(string stageSelectionSceneName)
+        {
+            if (IsSceneStageSelectionLoaded)
+            {
+                SceneManager.UnloadSceneAsync(stageSelectionSceneName);
+                IsSceneStageSelectionLoaded = false;
             }
         }
 

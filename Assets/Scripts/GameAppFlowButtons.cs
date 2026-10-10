@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Video;
 
 namespace Theerapat_Boongrom.Code672110100
 {
@@ -17,6 +18,16 @@ namespace Theerapat_Boongrom.Code672110100
         public void UnloadOptionsScene(string optionSceneName)
         {
             GameAppFlowManager.Instance.UnloadOptionScene(optionSceneName);
+        }
+
+        public void LoadStageSelectionScene(string stageSelectionSceneName)
+        {
+            GameAppFlowManager.Instance.LoadStageSelectionScene(stageSelectionSceneName);
+        }
+
+        public void UnloadStageSelectionScene(string stageSelectionSceneName)
+        {
+            GameAppFlowManager.Instance.UnloadStageSelectionScene(stageSelectionSceneName);
         }
 
         public void ExitGame()
