@@ -30,6 +30,26 @@ namespace Theerapat_Boongrom.Code672110100
             GameAppFlowManager.Instance.UnloadStageSelectionScene(stageSelectionSceneName);
         }
 
+        public void LoadGameOverScene(string LoadGameOverScene)
+        {
+            GameAppFlowManager.Instance.LoadGameOverScene(LoadGameOverScene);
+        }
+
+        public void UnLoadGameOverScene(string LoadGameOverScene)
+        {
+            GameAppFlowManager.Instance.UnloadGameOverScene(LoadGameOverScene);
+        }
+
+        public void LoadMissionCompleteScene(string LoadGameOverScene)
+        {
+            GameAppFlowManager.Instance.LoadMissionCompleteScene(LoadGameOverScene);
+        }
+
+        public void UnloadMissionCompleteScene(string LoadGameOverScene)
+        {
+            GameAppFlowManager.Instance.UnloadMissionCompleteScene(LoadGameOverScene);
+        }
+
         public void ExitGame()
         {
             GameAppFlowManager.Instance.ExitGame();

@@ -8,6 +8,8 @@ namespace Theerapat_Boongrom.Code672110100
     {
         protected static bool IsSceneOptionsLoaded;
         protected static bool IsSceneStageSelectionLoaded;
+        protected static bool IsSceneGameOverLoaded;
+        protected static bool IsSceneMissionCompleteLoded;
 
         public void LoadScene(string sceneName)
         {
@@ -57,6 +59,42 @@ namespace Theerapat_Boongrom.Code672110100
             {
                 SceneManager.UnloadSceneAsync(stageSelectionSceneName);
                 IsSceneStageSelectionLoaded = false;
+            }
+        }
+
+        public void LoadGameOverScene(string LoadGameOverScene)
+        {
+            if (!IsSceneGameOverLoaded)
+            {
+                SceneManager.LoadScene(LoadGameOverScene, LoadSceneMode.Additive);
+                IsSceneGameOverLoaded = true;
+            }
+        }
+
+        public void UnloadGameOverScene(string LoadGameOverScene)
+        {
+            if (IsSceneGameOverLoaded)
+            {
+                SceneManager.UnloadSceneAsync(LoadGameOverScene);
+                IsSceneGameOverLoaded = false;
+            }
+        }
+
+        public void LoadMissionCompleteScene(string LoadMissionCompleteScene)
+        {
+            if (!IsSceneMissionCompleteLoded)
+            {
+                SceneManager.LoadScene(LoadMissionCompleteScene, LoadSceneMode.Additive);
+                IsSceneMissionCompleteLoded = true;
+            }
+        }
+
+        public void UnloadMissionCompleteScene(string LoadMissionCompleteScene)
+        {
+            if (IsSceneMissionCompleteLoded)
+            {
+                SceneManager.UnloadSceneAsync(LoadMissionCompleteScene);
+                IsSceneMissionCompleteLoded = false;
             }
         }
 
