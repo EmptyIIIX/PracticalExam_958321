@@ -71,7 +71,7 @@ namespace Theerapat_Boongrom.Code672110100
             }
         }
 
-        public void UnloadGameOverScene(string LoadGameOverScene)
+        public void UnLoadGameOverScene(string LoadGameOverScene)
         {
             if (IsSceneGameOverLoaded)
             {
@@ -80,20 +80,20 @@ namespace Theerapat_Boongrom.Code672110100
             }
         }
 
-        public void LoadMissionCompleteScene(string LoadMissionCompleteScene)
+        public void LoadMissionComplete(string LoadMissionComplete)
         {
             if (!IsSceneMissionCompleteLoded)
             {
-                SceneManager.LoadScene(LoadMissionCompleteScene, LoadSceneMode.Additive);
+                SceneManager.LoadScene(LoadMissionComplete, LoadSceneMode.Additive);
                 IsSceneMissionCompleteLoded = true;
             }
         }
 
-        public void UnloadMissionCompleteScene(string LoadMissionCompleteScene)
+        public void UnLoadMissionComplete(string LoadMissionComplete)
         {
-            if (IsSceneMissionCompleteLoded)
+            if (!IsSceneMissionCompleteLoded)
             {
-                SceneManager.UnloadSceneAsync(LoadMissionCompleteScene);
+                SceneManager.UnloadSceneAsync(LoadMissionComplete);
                 IsSceneMissionCompleteLoded = false;
             }
         }

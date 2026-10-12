@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Theerapat_Boongrom.Code672110100;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class ScoreManager : MonoBehaviour
         // Check win condition
         if (currentScore >= winScore)
         {
-            SceneManager.LoadScene(missionCompleteScene, LoadSceneMode.Single);
+            GameAppFlowManager.Instance.LoadScene(missionCompleteScene);
         }
     }
 
