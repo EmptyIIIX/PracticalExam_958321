@@ -87,6 +87,9 @@ namespace StarterAssets
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
 
+        // movement control
+        public bool CanMove { get; set; } = true;
+
         // timeout deltatime
         private float _jumpTimeoutDelta;
         private float _fallTimeoutDelta;
@@ -213,6 +216,13 @@ namespace StarterAssets
 
         private void Move()
         {
+            if (!CanMove)
+            {
+                _input.move = Vector2.zero;
+                _input.look = Vector2.zero;
+                return;
+            }
+
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 

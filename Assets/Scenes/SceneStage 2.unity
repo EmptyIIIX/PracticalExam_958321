@@ -1995,7 +1995,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2532391352648671692, guid: cace09aa4d0dcd04b84858a5bb8707fe, type: 3}
       propertyPath: scoreValue
-      value: 500
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 3885198080893599029, guid: cace09aa4d0dcd04b84858a5bb8707fe, type: 3}
       propertyPath: m_Name
@@ -21650,10 +21650,6 @@ PrefabInstance:
     - target: {fileID: 4984145763755050142, guid: 3850d3e16588cef4ea4bd4f9a30be326, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4984145763755050142, guid: 3850d3e16588cef4ea4bd4f9a30be326, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

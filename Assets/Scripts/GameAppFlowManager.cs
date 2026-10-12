@@ -100,7 +100,11 @@ namespace Theerapat_Boongrom.Code672110100
 
         public void ExitGame()
         {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
             Application.Quit();
+#endif
             Debug.Log("OnExit");
         }
 

@@ -34,13 +34,13 @@ namespace Theerapat_Boongrom.Code672110100
 
         private void Awake()
         {
-            if (Instance != null && Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
+            // if (Instance != null && Instance != this)
+            // {
+            //     Destroy(gameObject);
+            //     return;
+            // }
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
 
         private void Start()
@@ -60,7 +60,7 @@ namespace Theerapat_Boongrom.Code672110100
             m_OnTimeChanged?.Invoke(_TimeRemaining);
 
             if (timeText != null) timeText.text = $"Time Remain: {(int)TimeRemaining}s";
-            else Debug.LogWarning("⚠️ Time Text not assigned!");
+            else return;
 
             if (Time.time >= _EndTimeStamp)
             {
@@ -90,8 +90,20 @@ namespace Theerapat_Boongrom.Code672110100
             m_TimerEndEvent.Invoke();
             m_OnTimeChanged?.Invoke(0f);
 
+            // Disable player movement and unlock cursor
+            DisablePlayerAndUnlockCursor();
+
             // Load Game Over scene
             LoadGameOverScene();
+        }
+
+        private void DisablePlayerAndUnlockCursor()
+        {
+            var controller = FindAnyObjectByType<ThirdPersonController>();
+            var inputs = FindAnyObjectByType<StarterAssetsInputs>();
+
+            if (controller != null) controller.CanMove = false;
+            if (inputs != null) inputs.SetCursorLocked(false);
         }
 
         public void AddTime(float timeToAdd)
