@@ -128,3 +128,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   scoreValue: 500
+  collectSound: {fileID: 8300000, guid: 5204760a42412064491016d475fed995, type: 3}
+  volume: 1

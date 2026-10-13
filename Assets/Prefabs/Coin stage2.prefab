@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Theerapat_Boongrom.Code672110100.ScoreItem_Stage2
   scoreValue: 500
+  collectSound: {fileID: 8300000, guid: 5204760a42412064491016d475fed995, type: 3}
+  volume: 1
 --- !u!114 &-7207146979444069942
 MonoBehaviour:
   m_ObjectHideFlags: 0
