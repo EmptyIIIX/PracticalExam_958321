@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 9149081332868760192}
   - component: {fileID: 7851690157749161385}
   - component: {fileID: 959368824778147636}
-  - component: {fileID: 2532391352648671692}
+  - component: {fileID: -5334174526566293014}
+  - component: {fileID: -7995485592609445102}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: Coin Fake stage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3885198080893599029}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -6.04276, y: 1.086, z: 4.35028}
+  m_LocalPosition: {x: 1.5763667, y: 0.96948016, z: -2.7915795}
   m_LocalScale: {x: 1.1101431, y: 0.18458211, z: 1.4389603}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -68,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 893cd2523b82c7c4594d5e20b149ad17, type: 2}
+  - {fileID: 2100000, guid: 8db9cc3af245d49428ba7f4287314551, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,7 +116,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &2532391352648671692
+--- !u!114 &-5334174526566293014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,7 +125,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 3885198080893599029}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d5320bcc1109744892e8d601fea8ddf, type: 3}
+  m_Script: {fileID: 11500000, guid: f44e077f3e096234c8d10021111acb5c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Item
-  scoreValue: 500
+  m_EditorClassIdentifier: Assembly-CSharp::Theerapat_Boongrom.Code672110100.ScoreItem_Stage2
+  scoreValue: -500
+--- !u!114 &-7995485592609445102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3885198080893599029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff957929aa2a83489d73399d5f282dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Theerapat_Boongrom.Code672110100.PromptInteractable
+  m_OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -5334174526566293014}
+        m_TargetAssemblyTypeName: Theerapat_Boongrom.Code672110100.ScoreItem_Stage2,
+          Assembly-CSharp
+        m_MethodName: Collect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_OnActorEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActorExit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractGameObject:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActorEnterGameObject:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActorExitGameObject:
+    m_PersistentCalls:
+      m_Calls: []
